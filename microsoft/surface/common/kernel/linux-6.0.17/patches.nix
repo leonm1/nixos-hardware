@@ -8,6 +8,8 @@
     name = "microsoft-surface-patches-linux-${version}";
     patch = null;
     structuredExtraConfig = with kernel; {
+      CONFIG_STAGING_MEDIA = yes;
+
       #
       # Surface Aggregator Module
       #
