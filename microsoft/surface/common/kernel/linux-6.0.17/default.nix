@@ -14,7 +14,7 @@ let
   kernelPatches = pkgs.callPackage ./patches.nix {
     inherit patchDir;
   };
-  structuredExtraConfig = pkgs.callPackage ./config.nix {
+  structuredExtraConfig = import ./config.nix {
     inherit (lib) kernel;
   };
 
