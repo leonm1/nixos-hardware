@@ -15,7 +15,7 @@ let
     inherit patchDir;
   };
   structuredExtraConfig = pkgs.callPackage ./config.nix {
-    inherit lib;
+    inherit (lib) kernel;
   };
 
   kernelPackages = linuxPackage {

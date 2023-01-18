@@ -1,7 +1,6 @@
-{ lib }:
+{ kernel }:
 
-with lib;
-with lib.kernel; 
+with kernel;
 
 {
   STAGING_MEDIA = yes;
