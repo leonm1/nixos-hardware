@@ -26,6 +26,7 @@ let
       CONFIG_STAGING_MEDIA y
       CONFIG_VIDEO_IPU3_IMGU m
     '';
+    ignoreConfigErrors = true;
   };
 
 
