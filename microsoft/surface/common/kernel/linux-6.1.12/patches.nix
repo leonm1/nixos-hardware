@@ -114,15 +114,19 @@
     patch = patchDir + "/0009-surface-typecover.patch";
   }
   {
-    name = "ms-surface/0010-cameras";
-    patch = patchDir + "/0010-cameras.patch";
+    name = "ms-surface/0010-surface-shutdown";
+    patch = patchDir + "/0010-surface-shutdown.patch";
   }
   {
-    name = "ms-surface/0011-amd-gpio";
-    patch = patchDir + "/0011-amd-gpio.patch";
+    name = "ms-surface/0011-cameras";
+    patch = patchDir + "/0011-cameras.patch";
   }
   {
-    name = "ms-surface/0012-rtc";
-    patch = patchDir + "/0012-rtc.patch";
+    name = "ms-surface/0012-amd-gpio";
+    patch = patchDir + "/0012-amd-gpio.patch";
+  }
+  {
+    name = "ms-surface/0013-rtc";
+    patch = patchDir + "/0013-rtc.patch";
   }
 ]
