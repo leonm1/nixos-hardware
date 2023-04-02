@@ -20,7 +20,7 @@ in {
         description = "IPTSD";
         path = with pkgs; [ iptsd ];
         script = "iptsd $1";
-        scriptArgs = "/dev/hidraw0";
+        scriptArgs = "/dev/hidraw4";
         wantedBy = [ "multi-user.target" ];
       };
     })
