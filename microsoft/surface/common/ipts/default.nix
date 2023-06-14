@@ -18,9 +18,8 @@ in {
     (mkIf cfg.enable {
       systemd.services.iptsd = {
         description = "IPTSD";
-        path = with pkgs; [ iptsd ];
-        script = "iptsd $1";
-        scriptArgs = "/dev/hidraw4";
+        path = with pkgs; [ bash iptsd ];
+        script = "iptsd $(iptsd-find-hidraw)";
         wantedBy = [ "multi-user.target" ];
       };
     })

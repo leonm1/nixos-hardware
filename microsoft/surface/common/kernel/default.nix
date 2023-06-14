@@ -5,8 +5,7 @@ let
 
 in {
   imports = [
-    ./linux-6.1.12
-    ./linux-6.2.13
+    ./linux-6.3.6
   ];
 
   options.microsoft-surface.kernelVersion = mkOption {
