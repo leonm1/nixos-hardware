@@ -8,7 +8,7 @@ let
 
   cfg = config.microsoft-surface;
 
-  version = "6.3.6";
+  version = "6.3.8";
   extraMeta.branch = "6.3";
   patchDir = repos.linux-surface + "/patches/${extraMeta.branch}";
   kernelPatches = pkgs.callPackage ./patches.nix {
@@ -20,17 +20,17 @@ let
     inherit version extraMeta kernelPatches;
     src = fetchurl {
       url = "mirror://kernel/linux/kernel/v6.x/linux-${version}.tar.xz";
-      sha256 = "sha256-emofDfoL9/RfnUp7QJMVzzImeFCtq02wM6F94DIKJO8=";
+      sha256 = "sha256-QyPUISUOLkRMNdNvSqjdtWWR3twlxo01nRnE753SCVU=";
     };
   };
 
 
 in {
   options.microsoft-surface.kernelVersion = mkOption {
-    type = types.enum [ "6.3.6" ];
+    type = types.enum [ "6.3.8" ];
   };
 
-  config = mkIf (cfg.kernelVersion == "6.3.6") {
+  config = mkIf (cfg.kernelVersion == "6.3.8") {
     boot = {
       inherit kernelPackages;
     };
