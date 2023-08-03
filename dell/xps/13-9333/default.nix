@@ -2,7 +2,7 @@
   imports = [
     ../../../common/cpu/intel
     ../../../common/pc/laptop
-    ../../../common/pc/ssd # Not sure if my SSD was there when I bought his PC or if I replaced it later
+    ../../../common/pc/ssd
   ];
 
   # Required to allow the touchpad to work
