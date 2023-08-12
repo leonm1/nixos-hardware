@@ -21,6 +21,10 @@ in {
         path = with pkgs; [ bash iptsd ];
         script = "iptsd $(iptsd-find-hidraw)";
         wantedBy = [ "multi-user.target" ];
+        serviceConfig = {
+          ExecStop = "${pkgs.util-linux}/bin/kill -TERM -$MAINPID";
+          Restart = "always";
+        };
       };
     })
   ];
